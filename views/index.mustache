@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Women's World Cup! Wow!!!</title>
+    <meta name="description" content="🌍⚽Women’s 🌏World Cup🌏 Bracket of Friendship⚽🌎">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        🌍⚽Women’s 🌏World Cup🌏 Bracket of Friendship⚽🌎
+      </h1>
+    </header>
+
+    <main>
+      {{#dates}}
+      <h3>{{date}}</h3>
+      <ul>
+        {{#matches}}
+        <li>
+          <a href="{{href}}">
+            <img src="{{home.flag}}" class="flag"><span class="matchup">{{home.name}} ({{home.owner}}) vs. {{away.name}} ({{away.owner}})</span><img src="{{away.flag}}" class="flag">
+          </a>
+        </li>
+        {{/matches}}
+      </ul>
+      {{/dates}}
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+
+  </body>
+</html>
